@@ -21,8 +21,9 @@ function encodeLine(str) {
             let number = 1
             while (str[i] === str[i + 1]) {
                 number++
+                i++
             }
-            result.push(number === 1 ? ('', str[i]) : (number, str[i]))
+            result.push(number === 1 ? '' : number, str[i])
         }
         return result.join('')
     }
